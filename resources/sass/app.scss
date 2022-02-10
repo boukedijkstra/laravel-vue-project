@@ -1,0 +1,145 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "header";
+@import "forms";
+@import "buttons";
+@import "block";
+
+#overlay {
+    position: fixed;
+    //display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 20;
+    cursor: pointer;
+}
+
+.overlay {
+    z-index: 21;
+    position: fixed; //absolute;
+    top: 10px;// 0;
+    max-width: 1004px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include media-phone {
+        right: 10px;
+        left: 10px;
+        transform: unset;
+    }
+}
+
+body {
+    background-image: url("https://www.drijfveer.nl/themes/drijfveer2015/img/logo@2x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: rgb(240, 242, 245);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(28, 30, 33);
+    min-height: 100vh;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.spacer {
+    height: 80px;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 10px;
+    position: relative;
+}
+
+
+.bg-red {
+    background-color: #DC3545;
+}
+
+.bg-yellow {
+    background-color: #ffc107;
+}
+
+.bg-green {
+    background-color: #28A745;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.p-1 {
+    padding: 10px;
+}
+
+.pl-1 {
+    padding-left: 10px;
+}
+
+.pb-1 {
+    padding-bottom: 10px;
+}
+
+.pb-2 {
+    padding-bottom: 20px;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.position-relative {
+    position: relative;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 20;
+    i {
+        font-size: 80px;
+    }
+}

@@ -1,0 +1,36 @@
+h1 {
+  font-weight: 700;
+  @include fluid-type(font-size,320px,1440px,14px,20px);
+  letter-spacing: .5px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.text-small {
+    font-size: 11px;
+}
+
+.text-orange {
+  color: #fd7903 !important;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.text-red {
+    color: #DC3545 !important;
+}
+
+.text-green {
+    color: #28A745;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.border-green {
+    border: solid 1px #28A745;
+}

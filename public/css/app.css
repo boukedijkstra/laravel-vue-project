@@ -1,0 +1,601 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 320px) {
+  h1 {
+    font-size: calc(14px + 6 * (100vw - 320px) / 1120);
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.text-small {
+  font-size: 11px;
+}
+
+.text-orange {
+  color: #fd7903 !important;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.text-red {
+  color: #DC3545 !important;
+}
+
+.text-green {
+  color: #28A745;
+}
+
+.text-white {
+  color: #FFFFFF;
+}
+
+.border-green {
+  border: solid 1px #28A745;
+}
+
+header {
+  background-color: #FFFFFF;
+  padding: 10px 0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+header .main-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+header .main-menu__item {
+  background-color: #e4e6eb;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header .main-menu__item:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 3px;
+  background-color: #fd7903;
+  transition: width 200ms;
+}
+
+header .main-menu__item:before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -40px;
+  background-color: #1c1e21;
+  color: #FFFFFF;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 11px;
+  opacity: 0;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  transition: opacity 500ms;
+}
+
+header .main-menu__item.active,
+header .main-menu__item:hover {
+  color: #fd7903;
+}
+
+header .main-menu__item.active:after,
+header .main-menu__item:hover:after {
+  width: 100%;
+}
+
+header .main-menu__item:hover:before {
+  opacity: 0.8;
+  transition-delay: 200ms;
+}
+
+@media screen and (max-width: 575px) {
+  header .main-menu {
+    padding: 0;
+  }
+}
+
+header #user-menu {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+  width: 300px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=submit],
+button[type=submit],
+select,
+option,
+textarea {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding: 8px;
+  outline: none;
+  background-color: #f0f2f5;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: #e4e6eb;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fd7903 !important;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #dbdee4;
+}
+
+.button--large {
+  border-radius: 20px;
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.button--red {
+  color: #DC3545 !important;
+}
+
+.button--yellow {
+  color: darkkhaki !important;
+}
+
+.button--black {
+  color: black !important;
+}
+
+.button--green {
+  color: #28A745 !important;
+}
+
+.button--margin i {
+  margin-right: 6px;
+}
+
+.block {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+  margin-bottom: 20px;
+}
+
+.block--job {
+  cursor: pointer;
+}
+
+.block--job:hover {
+  background-color: #f0f2f5;
+}
+
+.block--job .priority {
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.block--small {
+  max-width: 400px;
+  margin: auto;
+}
+
+.block__boat-type {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f0f2f5;
+  display: inline-block;
+  text-align: center;
+  padding-top: 4px;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.block p {
+  margin-top: 10px;
+}
+
+.block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block__header__buttons {
+  white-space: nowrap;
+}
+
+.block__header__buttons a {
+  margin-left: 5px;
+}
+
+.block__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.block__buttons a {
+  margin-left: 5px;
+}
+
+.block__footer {
+  color: #65676b;
+  font-size: 11px;
+  float: right;
+  margin-top: 5px;
+}
+
+@media (min-width: 320px) {
+  .block__footer {
+    font-size: calc(11px + 2 * (100vw - 320px) / 1120);
+  }
+}
+
+@media (min-width: 1440px) {
+  .block__footer {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .block__footer {
+    float: unset;
+    display: block;
+  }
+}
+
+.block .job-history {
+  border: 1px solid #f0f2f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.block .job-history div {
+  padding: 5px;
+}
+
+.block .job-history div p {
+  margin-top: 0;
+}
+
+.block .job-history div .fa-trash-alt {
+  display: none;
+}
+
+.block .job-history div:hover .fa-trash-alt {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.block .job-history div:nth-child(odd) {
+  background-color: #f0f2f5;
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  cursor: pointer;
+}
+
+.overlay {
+  z-index: 21;
+  position: fixed;
+  top: 10px;
+  max-width: 1004px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    right: 10px;
+    left: 10px;
+    transform: unset;
+  }
+}
+
+body {
+  background-image: url("https://www.drijfveer.nl/themes/drijfveer2015/img/logo@2x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #f0f2f5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1c1e21;
+  min-height: 100vh;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.spacer {
+  height: 80px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 10px;
+  position: relative;
+}
+
+.bg-red {
+  background-color: #DC3545;
+}
+
+.bg-yellow {
+  background-color: #ffc107;
+}
+
+.bg-green {
+  background-color: #28A745;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.pl-1 {
+  padding-left: 10px;
+}
+
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.pb-2 {
+  padding-bottom: 20px;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.position-relative {
+  position: relative;
+}
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+#loading i {
+  font-size: 80px;
+}
+

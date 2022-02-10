@@ -1,0 +1,101 @@
+.block {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+  margin-bottom: 20px;
+
+  &--job {
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(240, 242, 245);
+    }
+      .priority {
+          margin-left: 10px;
+          margin-right: 20px;
+          margin-top: 10px;
+      }
+  }
+
+    &--small {
+        max-width: 400px;
+        margin: auto;
+    }
+
+  &__boat-type {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgb(240, 242, 245);
+    display: inline-block;
+    text-align: center;
+    padding-top: 4px;
+    margin-right: 10px;
+    font-weight: 400;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__buttons {
+      white-space: nowrap;
+      a {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      margin-left: 5px;
+    }
+  }
+
+  &__footer {
+    color: rgb(101, 103, 107);
+    @include fluid-type(font-size,320px,1440px,11px,13px);
+    float: right;
+    margin-top: 5px;
+
+    @include media-phone-small {
+      float: unset;
+      display: block;
+    }
+  }
+
+    .job-history {
+        border: 1px solid rgb(240, 242, 245);
+        border-radius: 10px;
+        overflow: hidden;
+
+
+        div {
+            padding: 5px;
+            p {
+                margin-top: 0;
+            }
+            .fa-trash-alt {
+                display: none;
+            }
+            &:hover {
+                .fa-trash-alt {
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+        }
+        div:nth-child(odd) {
+            background-color: rgb(240, 242, 245);
+        }
+
+    }
+
+}
