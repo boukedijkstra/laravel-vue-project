@@ -1,6 +1,6 @@
 ## Laravel-vue-project
 
-A practise project from 2020 to get some experience with the laravel framework and Vue components. It's far from finished and I'm sure it's full of bugs but I just wanted to try out these frameworks.
+A practise project from 2020 to get some experience with the laravel framework and Vue components. It's far from finished and I'm sure there are bugs but I just wanted to try out these frameworks. It's (the beginning of) a boat maintenance app, to keep track of jobs and repairs on different boats.
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
